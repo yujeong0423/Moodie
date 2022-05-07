@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:moodie1/pages/post/detail.dart';
 import 'package:moodie1/pages/post/home_page.dart';
 import 'package:moodie1/pages/post/homescreen.dart';
 import 'package:moodie1/pages/post/write_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
               children: [
                 WritePage(),
                 HomeScreen(),
-                JoinPage(),
+                Detail(),
               ],
             ),
             bottomNavigationBar: TabBar(tabs: [

@@ -23,7 +23,7 @@ class WritePage extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              height: 50,
+              height: 70,
               child: Text(
                 "Moodie",
                 style: TextStyle(
@@ -32,22 +32,60 @@ class WritePage extends StatelessWidget {
               ),
             ),
           ),
-              CustomTextFormField(
-                hint: "Title",
-                funvalidator: validateTitle(),
+            Container(
+              alignment: Alignment.center,
+              height: 40,
+              child: Text(
+                "오늘의 문답",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff5973FF)
               ),
-              CustomTextArea(
-                  hint: "Content",
-                  funvalidator: validateContent()
-              ),
-              CustomElevatedButton(
-                text: "글쓰기 완료",
-                funpageRoute: (){
-                  if(_formKey.currentState!.validate()) {
-                    Get.off(HomeScreen());
-                  }
-                  },
-              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(30, 15, 30, 10),
+            width: 340,
+            height: 400,
+            decoration: BoxDecoration(
+              color: Color(0xffE8EBFF),
+              borderRadius: BorderRadius.circular(15),// 모서리를 둥글게
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+            ),
+            child:TextField(
+              decoration: new InputDecoration(
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none),
+              maxLength: 200,
+                maxLines: 18,
+                style: TextStyle(
+                    letterSpacing: 1.2, fontSize: 15, fontWeight: FontWeight.bold,
+                    color: Colors.black)
+            ),
+          ),
+            // CustomTextFormField(
+              //   hint: "Title",
+              //   funvalidator: validateTitle(),
+              // ),
+              // CustomTextArea(
+              //     hint: "Content",
+              //     funvalidator: validateContent()
+              // ),
+              // CustomElevatedButton(
+              //   text: "글쓰기 완료",
+              //   funpageRoute: (){
+              //     if(_formKey.currentState!.validate()) {
+              //       Get.off(HomeScreen());
+              //     }
+              //     },
+              // ),
             ],
           ),
         ),
