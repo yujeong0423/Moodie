@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moodie1/components/custom_text_form_field.dart';
 import 'package:moodie1/components/custom_textarea.dart';
 import 'package:moodie1/pages/post/home_page.dart';
+import 'package:moodie1/pages/post/homescreen.dart';
 import 'package:moodie1/util/validator_util.dart';
 import 'package:get/get.dart';
 import '../../components/custom_elevated_button.dart';
@@ -26,7 +27,7 @@ class WritePage extends StatelessWidget {
               child: Text(
                 "Moodie",
                 style: TextStyle(
-                fontSize: 30,
+                fontSize: 20,
                 color: Color(0xff5973FF)
               ),
             ),
@@ -43,7 +44,7 @@ class WritePage extends StatelessWidget {
                 text: "글쓰기 완료",
                 funpageRoute: (){
                   if(_formKey.currentState!.validate()) {
-                    Get.off(HomePage());
+                    Get.off(HomeScreen());
                   }
                   },
               ),

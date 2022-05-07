@@ -3,6 +3,7 @@ import 'package:moodie1/components/custom_elevated_button.dart';
 import 'package:moodie1/components/custom_text_form_field.dart';
 import 'package:get/get.dart';
 import 'package:moodie1/pages/post/home_page.dart';
+import 'package:moodie1/pages/post/homescreen.dart';
 import 'package:moodie1/util/validator_util.dart';
 
 class LoginPage extends StatelessWidget {
@@ -50,7 +51,7 @@ class LoginPage extends StatelessWidget {
             text: "로그인",
             funpageRoute: (){
               if(_formKey.currentState!.validate()) {
-                Get.to(HomePage());
+                Get.to(HomeScreen());
               }
             },
           ),

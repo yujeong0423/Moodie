@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:moodie1/pages/home.dart';
 import 'package:moodie1/pages/post/home_page.dart';
+import 'package:moodie1/pages/post/homescreen.dart';
 import 'package:moodie1/pages/post/write_page.dart';
 import 'package:moodie1/pages/user/join_page.dart';
 import 'package:get/get.dart';
 import 'package:moodie1/pages/user/login_page.dart';
 import 'package:moodie1/pages/user/user_info.dart';
-import 'package:moodie1/pages/view.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
             body: TabBarView(
               children: [
                 WritePage(),
-                MyHomePage(title: 'aa',),
+                HomeScreen(),
                 JoinPage(),
               ],
             ),
