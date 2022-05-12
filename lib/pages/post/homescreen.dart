@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // moodie 컨테이너
               Container(
                 alignment: Alignment.center,
-                height: 76,
+                margin: EdgeInsets.fromLTRB(0, 25, 0, 30),
                 child: Text(
                   "Moodie",
                   style: TextStyle(
@@ -28,8 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               //뒤로가기 컨테이너
               Container(
-                  height: 23,
-                  width: 100.0,
+                  height: 6,
                   child: Row(
                     children: <Widget>[
                       Icon(
@@ -43,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // 오늘의 질문 텍스트 컨테이너
               Container(
                 alignment: Alignment.center,
-                height: 38,
+                margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                 child: Text(
                   "오늘의 질문",
                   style: TextStyle(

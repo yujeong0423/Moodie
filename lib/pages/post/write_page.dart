@@ -1,11 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:moodie1/components/custom_text_form_field.dart';
-import 'package:moodie1/components/custom_textarea.dart';
-import 'package:moodie1/pages/post/home_page.dart';
-import 'package:moodie1/pages/post/homescreen.dart';
-import 'package:moodie1/util/validator_util.dart';
-import 'package:get/get.dart';
-import '../../components/custom_elevated_button.dart';
+// import 'package:moodie1/components/custom_text_form_field.dart';
+// import 'package:moodie1/components/custom_textarea.dart';
+// import 'package:moodie1/pages/post/home_page.dart';
+// import 'package:moodie1/pages/post/homescreen.dart';
+// import 'package:moodie1/util/validator_util.dart';
+// import 'package:get/get.dart';
+// import '../../components/custom_elevated_button.dart';
 
 class WritePage extends StatelessWidget {
 
@@ -23,26 +24,26 @@ class WritePage extends StatelessWidget {
           children: [
             Container(
               alignment: Alignment.center,
-              height: 70,
+              margin: EdgeInsets.fromLTRB(0, 25, 0, 30),
               child: Text(
                 "Moodie",
                 style: TextStyle(
-                fontSize: 20,
-                color: Color(0xff5973FF)
+                    fontSize: 25,
+                    color: Color(0xff5973FF)
+                ),
               ),
             ),
-          ),
             Container(
               alignment: Alignment.center,
-              height: 40,
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
               child: Text(
                 "오늘의 문답",
                 style: TextStyle(
                     fontSize: 18,
                     color: Color(0xff5973FF)
+                ),
               ),
             ),
-          ),
           Container(
             margin: EdgeInsets.fromLTRB(30, 15, 30, 10),
             width: 340,
@@ -59,16 +60,36 @@ class WritePage extends StatelessWidget {
                 ),
               ],
             ),
-            child:TextField(
-              decoration: new InputDecoration(
-                  border: InputBorder.none,
-                  focusedBorder: InputBorder.none),
-              maxLength: 200,
-                maxLines: 18,
-                style: TextStyle(
-                    letterSpacing: 1.2, fontSize: 15, fontWeight: FontWeight.bold,
-                    color: Colors.black)
-            ),
+              child: Container(
+                margin: EdgeInsets.fromLTRB(0, 0, 0, 350),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/happy.png'),
+                  ),
+                ),
+                child: Container(
+                    margin: EdgeInsets.fromLTRB(280, 365, 0, 0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.check,
+                          color: Colors.black,
+                        ),
+                      ],
+                    )
+                ),
+              ),
+
+            // child:TextField(
+            //   decoration: new InputDecoration(
+            //       border: InputBorder.none,
+            //       focusedBorder: InputBorder.none),
+            //   maxLength: 200,
+            //     maxLines: 18,
+            //     style: TextStyle(
+            //         letterSpacing: 1.2, fontSize: 15, fontWeight: FontWeight.bold,
+            //         color: Colors.black)
+            // ),
           ),
             // CustomTextFormField(
               //   hint: "Title",
